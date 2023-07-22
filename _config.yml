@@ -19,7 +19,7 @@ description: Development, PS and Math
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://asp345.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 lang: ko
-timezone: KST
+timezone: UTC
 exclude:
   - Gemfile
   - Gemfile.lock
