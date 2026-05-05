@@ -29,7 +29,7 @@ style = "class"
 [extra]
 theme_switcher = true
 default_theme = ""
-skin = "teal"
+skin = "blue"
 feed_icon = true
 copy_button = true
 show_reading_time = true
