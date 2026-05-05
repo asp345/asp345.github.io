@@ -1,0 +1,45 @@
+base_url = "https://asp345.github.io"
+title = "asp345's blog"
+description = "Personal notes and posts by asp345."
+author = "asp345"
+theme = "tabi"
+default_language = "en"
+generate_feeds = true
+feed_filenames = ["atom.xml", "rss.xml"]
+compile_sass = true
+minify_html = true
+build_search_index = true
+taxonomies = [{ name = "tags", feed = true }]
+
+[search]
+include_title = true
+include_description = true
+include_path = true
+include_content = true
+index_format = "elasticlunr_json"
+
+[markdown]
+bottom_footnotes = true
+smart_punctuation = true
+
+[markdown.highlighting]
+theme = "catppuccin-frappe"
+style = "class"
+
+[extra]
+theme_switcher = true
+default_theme = ""
+skin = "teal"
+feed_icon = true
+copy_button = true
+show_reading_time = true
+show_date = true
+quick_navigation_buttons = true
+socials = [
+  { name = "github", url = "https://github.com/asp345", icon = "github" },
+]
+menu = [
+  { name = "blog", url = "blog", trailing_slash = true },
+  { name = "archive", url = "archive", trailing_slash = true },
+  { name = "tags", url = "tags", trailing_slash = true },
+]

@@ -1,0 +1,4 @@
+/public/
+/result
+*.log
+.DS_Store
