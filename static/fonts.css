@@ -1,0 +1,177 @@
+@font-face {
+  font-display: swap;
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("/fonts/Geist.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Geist";
+  font-style: italic;
+  font-weight: 100 900;
+  src: url("/fonts/Geist-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Geist Mono";
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("/fonts/GeistMono.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Geist Mono";
+  font-style: italic;
+  font-weight: 100 900;
+  src: url("/fonts/GeistMono-Italic.woff2") format("woff2");
+}
+
+:root {
+  --custom-code-bg: #f6f6f6;
+  --custom-code-highlight-bg: #e8e8e8;
+  --custom-code-label-bg: #dcdcdc;
+  --custom-code-label-color: #222226;
+  --custom-code-text: #24292f;
+  --custom-code-comment: #6e7781;
+  --custom-code-red: #a31515;
+  --custom-code-blue: #0451a5;
+  --custom-code-green: #116329;
+  --custom-code-purple: #8250df;
+  --custom-code-brown: #795e26;
+  --custom-code-cyan: #267f99;
+  --custom-code-variable: #001080;
+  --codeblock-bg: var(--custom-code-bg);
+  --codeblock-highlight: var(--custom-code-highlight-bg);
+  --sans-serif-font: "Geist", Helvetica, Arial, sans-serif;
+  --serif-font: var(--sans-serif-font);
+  --code-font: "Geist Mono", "Cascadia Code", monospace;
+  --header-font: var(--sans-serif-font);
+  --post-font-family: var(--sans-serif-font);
+}
+
+[data-theme="dark"] {
+  --custom-code-bg: #151515;
+  --custom-code-highlight-bg: #252525;
+  --custom-code-label-bg: #2b2b2b;
+  --custom-code-label-color: #f0f0f0;
+  --custom-code-text: #d4d4d4;
+  --custom-code-comment: #6a9955;
+  --custom-code-red: #ce9178;
+  --custom-code-blue: #569cd6;
+  --custom-code-green: #b5cea8;
+  --custom-code-purple: #c586c0;
+  --custom-code-brown: #dcdcaa;
+  --custom-code-cyan: #4ec9b0;
+  --custom-code-variable: #9cdcfe;
+  --codeblock-bg: var(--custom-code-bg);
+  --codeblock-highlight: var(--custom-code-highlight-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --custom-code-bg: #151515;
+    --custom-code-highlight-bg: #252525;
+    --custom-code-label-bg: #2b2b2b;
+    --custom-code-label-color: #f0f0f0;
+    --custom-code-text: #d4d4d4;
+    --custom-code-comment: #6a9955;
+    --custom-code-red: #ce9178;
+    --custom-code-blue: #569cd6;
+    --custom-code-green: #b5cea8;
+    --custom-code-purple: #c586c0;
+    --custom-code-brown: #dcdcaa;
+    --custom-code-cyan: #4ec9b0;
+    --custom-code-variable: #9cdcfe;
+    --codeblock-bg: var(--custom-code-bg);
+    --codeblock-highlight: var(--custom-code-highlight-bg);
+  }
+}
+
+header {
+  font-family: var(--sans-serif-font);
+}
+
+code,
+pre code,
+pre code * {
+  font-feature-settings: "liga" 0, "calt" 0;
+  font-variant-ligatures: none;
+}
+
+#banner-home-img {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+pre.giallo.z-code,
+pre.z-code,
+.z-code {
+  background-color: var(--custom-code-bg) !important;
+}
+
+pre.z-code {
+  border: 1px solid var(--custom-code-highlight-bg);
+}
+
+.z-hl {
+  background-color: var(--custom-code-highlight-bg) !important;
+}
+
+pre code::before {
+  background-color: var(--custom-code-label-bg);
+  color: var(--custom-code-label-color);
+}
+
+pre.z-code,
+pre.z-code code,
+pre.z-code .z-punctuation {
+  color: var(--custom-code-text);
+}
+
+pre.z-code .z-comment {
+  color: var(--custom-code-comment);
+}
+
+pre.z-code .z-string,
+pre.z-code .z-markup.z-deleted {
+  color: var(--custom-code-red);
+}
+
+pre.z-code .z-keyword,
+pre.z-code .z-storage,
+pre.z-code .z-constant,
+pre.z-code .z-constant.z-language,
+pre.z-code .z-variable.z-language {
+  color: var(--custom-code-blue);
+}
+
+pre.z-code .z-variable {
+  color: var(--custom-code-variable);
+}
+
+pre.z-code .z-constant.z-numeric,
+pre.z-code .z-markup.z-inserted {
+  color: var(--custom-code-green);
+}
+
+pre.z-code .z-keyword.z-control {
+  color: var(--custom-code-purple);
+}
+
+pre.z-code .z-entity.z-name.z-function,
+pre.z-code .z-support.z-function {
+  color: var(--custom-code-brown);
+}
+
+pre.z-code .z-entity.z-name.z-class,
+pre.z-code .z-entity.z-name.z-namespace,
+pre.z-code .z-entity.z-name.z-type,
+pre.z-code .z-support.z-class,
+pre.z-code .z-support.z-type {
+  color: var(--custom-code-cyan);
+}

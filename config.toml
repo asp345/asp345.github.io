@@ -1,7 +1,7 @@
 base_url = "https://asp345.github.io"
 title = "asp345"
 description = "Personal notes and posts by asp345."
-author = "asp345"
+author = "Chanyeong Lim"
 theme = "tabi"
 default_language = "en"
 generate_feeds = true
@@ -23,18 +23,19 @@ bottom_footnotes = true
 smart_punctuation = true
 
 [markdown.highlighting]
-theme = "catppuccin-frappe"
 style = "class"
+theme = "dark-plus"
 
 [extra]
 theme_switcher = true
 default_theme = ""
-skin = "blue"
+skin = "teal"
 feed_icon = true
 copy_button = true
 show_reading_time = true
 show_date = true
 quick_navigation_buttons = true
+stylesheets = ["fonts.css"]
 socials = [
   { name = "github", url = "https://github.com/asp345", icon = "github" },
 ]
