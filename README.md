@@ -1,4 +1,4 @@
-# asp345's blog
+# asp345
 
 A small Zola blog based on `welpo/tabi-start`.
 
